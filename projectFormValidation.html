@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<hmtl>
+
+    <head>
+        <title>Form with Validation Project</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+        <style>
+            body {
+                background-color: #dedfe3;
+                font-family: Arial, Helvetica, sans-serif;
+                padding: 20px;
+            }
+
+            h1 {
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="m-3">
+            <h1 class="display-6">Form with Validation Project</h1>
+            <form method="POST">
+                <div class="form-group p-3">
+                    <label for="userId" class="lead">User id:</label>
+                    <input type="text" class="form-control" id=userId name=userId required minlength="5" maxlength="12"
+                        aria-describedby="userIdHelp">
+                    <small id="userIdHelp" class="form-text text-muted">Required, length of 5 to 12 characters</small>
+                </div>
+                <div class="form-group p-3">
+                    <label for="password" class="lead">Password:</label>
+                    <input type="password" class="form-control" id=pssword name=pssword required minlength="7"
+                        maxlength="12" aria-describedby="psswordHelp">
+                    <small id="psswordHelp" class="form-text text-muted">Required, length of 7 to 12 characters</small>
+                </div>
+                <div class="form-group p-3">
+                    <label for="name" class="lead">Name:</label>
+                    <input type="text" class="form-control" id=name name=name required pattern="[A-Za-z ]{1,}"
+                        title="Only characters" aria-describedby="nameHelp">
+                    <small id="nameHelp" class="form-text text-muted">Required, letters only</small>
+                </div>
+                <div class="form-group p-3">
+                    <lable for="address" class="lead">Address:</lable>
+                    <input type="text" class="form-control" id=address name=address aria-describedby="addressHelp">
+                    <small id="addressHelp" class="form-text text-muted">Optional field</small>
+                </div>
+                <div class="form-group p-3">
+                    <label for="country " class="lead">Country:</label>
+                    <select class="form-control" id="country" name="country">
+                        <option value="sa">South Africa</option>
+                        <option value="nam">Namibia</option>
+                        <option value="bot">Botswana</option>
+                    </select>
+                </div>
+                <div class="form-group p-3">
+                    <label for="zip" class="lead">ZIP code:</label>
+                    <input type="number" class="form-control" id=zip name=zip required>
+                    <small id="zip" class="form-text text-muted">Required</small>
+                </div>
+                <div class="form-group p-3">
+                    <lable for="email" class="lead">Email:</lable>
+                    <input type="email" class="form-control" id="email" name="email">
+                    <small id="email" class="form-text text-muted">Required. Valid email address only</small>
+                </div>
+                <div class="form-group p-3">
+                    <label for male class="lead">Sex:</label>
+                    <input type="radio" id="male" name="sex" value="Male" checked>
+                    <label id="group" for="male">Male</label>
+                    <input type="radio" id="female" name="sex" value="female">
+                    <label id="group" for="female">Female</label>
+                </div>
+                <div class="form-group p-3">
+                    <label for="about" class="lead">About:</label>
+                    <input type="textarea" class="form-control" id=about name=about rows="4">
+                </div>
+                <div class="form-group p-3">
+                    <input type="submit" id=submit name=submit value="Submit">
+                </div>
+            </form>
+        </div>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+
+    </body>
+</html>
