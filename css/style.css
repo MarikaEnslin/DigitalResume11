@@ -66,7 +66,7 @@ body {
 }
 
 .bannerBottom {
-  background-image: url("/images/BannerImage.jpg");
+  background-image: url("images/BannerImage.jpg");
   background-size: cover;
   color: white;
   text-align: center;
